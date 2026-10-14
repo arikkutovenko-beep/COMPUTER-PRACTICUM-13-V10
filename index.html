@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Планувальник подорожей (SPA — Варіант 10)</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Vue 3 CDN (збережено для сумісності з попередніми ПР) -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    
+    <!-- Основний скрипт SPA-роутера -->
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Планувальник подорожей</h1>
+        <!-- Навігація клієнтського роутера з атрибутом data-link -->
+        <nav>
+            <a href="/" data-link>Головна (Усі поїздки)</a>
+        </nav>
+    </header>
+
+    <div class="page-layout">
+        <!-- ЄДИНИЙ КОНТЕЙНЕР SPA: сюди роутер рендерить потрібну "сторінку" без перезавантаження -->
+        <main id="app"></main>
+
+        <aside id="budget" tabindex="0">
+            <h2>Бюджет подорожей</h2>
+            <div class="budget-amount">1 500 €</div>
+            <ul>
+                <li>Переліт: 200 €</li>
+                <li>Проживання: 800 €</li>
+                <li>Харчування та екскурсії: 500 €</li>
+            </ul>
+        </aside>
+    </div>
+    
+    <footer>
+        <p>&copy; 2026 Навчальний проєкт з ПВЗ. Виконав Кутовенко Ярослав ІП-52.</p>
+    </footer>
+</body>
+</html>
